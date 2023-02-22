@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "c3ad5731-8f3a-45ac-bff0-b148f3aa02e5",
+		"name": "cloud-cdnd-c2-final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19869821"
+	},
+	"item": [
+		{
+			"name": "request localhost",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{HOST_LOCAL}}/filteredimage?image_url=https://as2.ftcdn.net/v2/jpg/03/03/62/45/1000_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.jpg",
+					"protocol": "http",
+					"host": [
+						"{{HOST_LOCAL}}"
+					],
+					"path": [
+						"filteredimage"
+					],
+					"query": [
+						{
+							"key": "image_url",
+							"value": "https://as2.ftcdn.net/v2/jpg/03/03/62/45/1000_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request EB AWS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{HOST_EB}}/filteredimage?image_url=https://as2.ftcdn.net/v2/jpg/03/03/62/45/1000_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.jpg",
+					"protocol": "http",
+					"host": [
+						"{{HOST_EB}}"
+					],
+					"path": [
+						"filteredimage"
+					],
+					"query": [
+						{
+							"key": "image_url",
+							"value": "https://as2.ftcdn.net/v2/jpg/03/03/62/45/1000_F_303624505_u0bFT1Rnoj8CMUSs8wMCwoKlnWlh5Jiq.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST_LOCAL",
+			"value": "localhost:8082",
+			"type": "string"
+		},
+		{
+			"key": "HOST_EB",
+			"value": "image-filter-app-dev.us-east-1.elasticbeanstalk.com",
+			"type": "string"
+		}
+	]
+}
